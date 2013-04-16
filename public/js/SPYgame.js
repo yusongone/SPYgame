@@ -65,8 +65,9 @@ var GameSpace={};
 		_Login.prototype.initUI=function(tag){
 			this.body=$("<div/>",{"class":"login"});
 			var name=$("<input/>",{"placeholder":"昵称"});	
-			var login=$("<div/>",{"text":"LOGIN","class":"btn loginBT"})
-			this.body.append(name,login);
+			var login=$("<div/>",{"text":"LOGIN","class":"btn loginBT"});
+            var js=$("<p/>",{"class":"gitLink","text":"https://github.com/yusongone/SPYgame.git"});
+			this.body.append(name,login,js);
 			tag.append(this.body);
 
 			login.click(function(){
