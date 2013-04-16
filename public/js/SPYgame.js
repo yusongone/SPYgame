@@ -1,5 +1,6 @@
 var privateSpace={};
 $(document).ready(function(){
+    GameSpace.initWindow();
 	GameSpace.showScene("login");	
 //	GameSpace.showScene("gamePrelude");	
 //	GameSpace.showScene("playScene");	
@@ -13,6 +14,9 @@ var GameSpace={};
  * */
 (function(GS){
 	GS.initWindow=function(){
+        window.onbeforeunload=function(event){
+            event.returnValue="确定离开此游戏？";
+        }
 	};
 	GS.extend=function(sup,sub){
 		function temp(){};
