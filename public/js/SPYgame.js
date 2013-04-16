@@ -533,18 +533,20 @@ var GameSpace={};
             });
             socket.on("report",function(da){
                     var pp=peopleList.getPeople(da.name);
-                        pp.statusIn("投票完毕!");
+                        if(pp.life){
+                            pp.statusIn("投票完毕!");
+                        }
             });
             socket.on("begin",function(da){
                 that.hideControlBar();
                 that.showSpeak(da.word);
                 that.barText("游戏开始，请描述您收到的词语！");
-                peopleList.allStatusIn("正在思索。。。");
+                peopleList.allStatusIn("正在思索。。。",1);
             });
             socket.on("gameGoon",function(da){
                 that.showSpeak(that.word);
                 that.barText("有人被冤死，游戏继续，请描述您的词语！");
-                peopleList.allStatusIn("正在思索。。。");
+                peopleList.allStatusIn("正在思索。。。",1);
                 that.report=null;
             });
             socket.on("speak",function(da){
@@ -555,7 +557,7 @@ var GameSpace={};
             socket.on("reportNow",function(da){
                 that.hideControlBar();
                 that.barText("所有人投票完毕！从列表中选出你怀疑的人。");
-                peopleList.allStatusIn("正在投票。。。");
+                peopleList.allStatusIn("正在投票。。。",1);
                 peopleList.allPeopleCanReport();
             });
             socket.on("deletePeople",function(da){
@@ -581,7 +583,7 @@ var GameSpace={};
                     },
                     "spyWin":function(){
                         that.barText("卧底获胜！！！！");
-                        alert("卧底获胜！！");
+                        alert("卧底获胜！");
                         that.restart();
                     },
                     "manySPY":function(){
