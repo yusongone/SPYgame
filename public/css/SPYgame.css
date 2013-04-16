@@ -1,0 +1,341 @@
+*{margin:0;padding:0;list-style:none;color:rgb(0,255,50);}
+body{
+    font-size:62.5%;
+    background:black;
+}
+input{
+    padding-left:5px;
+    box-sizing:border-box;
+    height:30px;
+    color:rgb(0,255,50);
+    background:black;
+    border:1px solid rgb(0,255,50);
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+::scrollbar { 
+    display: none; 
+}
+.btn{
+    width:80px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    cursor: pointer;
+    margin:0 auto;
+    border:1px solid rgb(0,255,50);
+    color:rgb(0,255,50);
+    box-sizing:border-box;
+}
+.box{
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:100%;
+}	
+.box .gameBox{
+    position:relative;	
+    width:100%;
+    height:100%;
+    box-sizing:border-box;
+}
+.login,.gamePrelude,.playScene{
+    width:100%;
+    height:100%;
+    background:black;
+    box-sizing:border-box;
+    position:absolute;
+    top:0;left:0;
+}
+/*login scene*/
+.box .login{
+    text-align: center;
+    padding-top: 30%;
+    line-height: 28px;	
+}
+.box .loginBT{
+    border-top:none;
+}
+/*gamePrelude scene*/
+.box .gamePrelude{
+    position:relative;
+}
+.box .gamePrelude .paddingBox{
+    padding-top:35px;
+    width:100%;
+    height:100%;
+    box-sizing:border-box;
+    overflow:scroll;
+}
+.box .gamePrelude .preludeBox{
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+.box .gamePrelude .toolbar,.box .playScene .toolbar{
+    background:green;
+    /*box-shadow: 0px 0px 4px rgb(0,255,50);*/
+    border-bottom:1px solid rgb(0,255,50);
+    position:absolute;
+    z-index:9999;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    box-sizing:border-box;
+    padding:5px;
+}
+.box .gamePrelude .toolbar .create{
+    width: 50px;
+    height: 25px;
+    float: right;
+    line-height: 25px;
+}
+.box .gamePrelude .houseList{
+    width:100%;
+}
+.box .gamePrelude .houseList .addHouse{
+    text-align:center;
+    height:45px;
+    line-height:45px;
+    border-bottom:1px solid rgb(0,250,0);
+}
+.box .gamePrelude .houseList .addHouse input{
+    width:100px;
+}
+.box .gamePrelude .houseList .addHouse .ok{
+    width:80px;
+    display:inline-block;
+    vertical-align:-1px;
+}
+.box .gamePrelude .houseList .house{
+    position:relative;
+    width:100%;
+    height:50px;
+    box-sizing:border-box;
+    border-bottom:1px solid rgb(0,250,0);
+    color:rgb(0,250,0);
+    overflow:hidden;
+}	
+.box .gamePrelude .houseList .statu{
+    width:20px;
+    height:100%;
+    background:rgb(1,82,17);
+    position:absolute;
+    left:0;top:0;
+}
+.box .gamePrelude .houseList .infoBox{
+    width:100%;
+    height:100%;
+    box-sizing:border-box;	
+    padding-left:20px;
+    padding-right:50px;
+}
+.box .gamePrelude .houseList .pepleCount{
+    width:50px;
+    height:100%;
+    position:absolute;
+    border-left:1px solid green;
+    line-height:50px;
+    text-align:center;
+    right:0;top:0;
+}
+.box .gamePrelude .houseList .infoBox .name{
+    font-size:16px;
+    padding-left:10px;
+    line-height:35px;
+    height:30px;
+}
+.box .gamePrelude .houseList .infoBox .creator{
+    font-size:1.2em;
+    padding-left:10px;
+    height:12px;
+    color:green;
+}
+.box .gamePrelude .joinDiv{
+    position:absolute;
+    top:0;left:0;
+    width:100%;
+    height:100%;
+    background:black;
+    text-align:center;
+    line-height:45px;
+    opacity:0.8;
+}
+.box .gamePrelude .joinDiv .pas{
+    height: 18px;
+    padding-left: 10px;
+}
+.box .gamePrelude .joinDiv .ok{
+    width:80px;
+}
+/*play scene*/
+.box .playScene{
+}
+.box .playScene .playBox{
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+.box .playScene .toolbar .statusBar{
+    position:absolute;
+    top:0;left:0;
+    line-height:30px;
+    height:30px;
+    width:100%;
+    box-sizing:border-box;
+    padding:5px;
+}
+.box .playScene .toolbar .menu{
+    width: 50px;
+    height: 25px;
+    float: right;
+    line-height: 25px;
+}
+.box .playScene .controlBox{
+    position:absolute;
+    z-index:9999;
+    bottom: 0px;left: 0px;
+    width: 100%;
+    height: 90px;
+    box-shadow: 0px 0px 4px black;
+    overflow:hidden;
+}
+.box .playScene .controlBar{
+    width:100%;
+    height:60px;
+    text-align: center;
+    box-sizing:border-box;
+    padding:5px;
+    position:relative;
+    background:black;
+    border-top:1px solid rgb(0,250,50);
+    margin-top:30px;
+}
+.box .playScene .controlBar .start,.box .playScene .controlBar .send,.box .playScene .controlBar .ready{
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    line-height: 45px;
+}
+.box .playScene .controlBar .start{
+    background:blue;
+    width:80px;
+}
+.box .playScene .controlBar .ready{
+    background:green;
+    width:80px;
+}
+.box .playScene .controlBar .send{
+    position:absolute;
+    right:5px;top:6px;
+    border-radius: 5px;
+    line-height: 50px;
+}
+.box .playScene .controlBar .sendBox{
+    float:left;
+    height:100%;
+    width:100%;
+    box-sizing:border-box;
+    padding-right:50px;
+    padding-left:10px;
+}
+.box .playScene .controlBar .ms{
+    position: absolute;
+    top: -31px;
+    left: -1px;
+    color: #00FA32;
+    background: #DDD;
+    height: 30px;
+    padding: 0 15px 0 15px;
+    font-size: 26px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid #00FA32;
+    border-bottom: none;
+    background: black;
+}
+.box .playScene .controlBar .sendBox .speak{
+    width:100%;
+    height:45px;
+    background:none;
+    border:1px solid green;
+}
+.box .playScene .paddingBox{
+    padding-top:35px;
+    padding-bottom:90px;
+    width:100%;
+    height:100%;
+    overflow:scroll;
+    box-sizing:border-box;
+}
+.box .playScene .pepleList{
+    width:100%;
+}
+.box .playScene .pepleList .people{
+    width:100%;
+    height:80px;
+    border-bottom:1px solid rgb(0,250,50);
+    position:relative;
+}
+.box .playScene .pepleList .people .head{
+    width:80px;
+    height:80px;
+    background:green;
+    position:absolute;
+}
+.box .playScene .pepleList .people .head .distrust{
+    margin-bottom: 0px;
+    text-align: center;
+    margin-top: 60px;
+    font-size: 12px;
+    color: #00FA32;
+}
+.box .playScene .pepleList .people .infoBox{
+    width:100%;
+    box-sizing:border-box;
+    padding-left:80px;
+}
+.box .playScene .pepleList .people .info .describe{
+    width:100%;
+    height:64px;
+    padding-left:10px;
+    padding-top:5px;
+    font-size:12px;
+    box-sizing:border-box;
+}
+.box .playScene .pepleList .people .info .infoBar{
+    padding-left:10px;
+    color:green;
+}
+.box .playScene .pepleList .people .overDiv{
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0;top:0;
+}
+.box .playScene .pepleList .people .overDiv .box{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+.box .playScene .pepleList .people .overDiv .over{
+    opacity: 0.5;
+    background: black;
+    height: 100%;
+    width: 100%;
+}
+.box .playScene .pepleList .people .overDiv .btTool{
+    position:absolute;
+    top:0;left:0;
+    width:100%;
+    height:100%;
+    box-sizing:border-box;
+    border-left:10px solid rgb(0,250,50)
+}
+.box .playScene .pepleList .people .overDiv .btTool .btn{
+    margin:25px 20px 0 auto;
+}

@@ -1,0 +1,31 @@
+	.box{
+			font-family:arial,helvetica,sans-serif;
+			width:500px;
+			height:300px;
+			background:black;
+			color:white;
+			font-size:14px;
+			overflow:hidden;
+		}
+		.box .content{
+			width:100%;
+		}
+		.box .content .showList{
+			width:100%;
+		}
+		.box .content .inputBox{
+			width:100%;
+		}
+		.box #inp{
+			width:100%;
+			border: none;
+			height: 14px;
+			font-size:14px;
+			line-height:14px;
+			background: black;
+			color: white;
+			padding-right:20px;
+			font-family:arial,helvetica,sans-serif;
+			resize:none;
+		}
+
