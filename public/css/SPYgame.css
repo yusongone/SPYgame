@@ -17,6 +17,9 @@ input{
 ::scrollbar { 
     display: none; 
 }
+.gitLink{
+    margin-top:100px;
+}
 .btn{
     width:80px;
     height:30px;
