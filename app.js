@@ -5,11 +5,11 @@
 var express = require('express'),
 	http = require('http'),
 	socketIO = require("socket.io");
-var app = module.exports = express();
 var paserCookie=require("./lib/paserCookie");
 var house=require("./lib/house");
 var parseSigendCookie=require("connect").utils.parseSignedCookie;
 var MemoryStore=new express.session.MemoryStore;
+var app = express.createServer();
 
 var i=0;
 
@@ -44,11 +44,12 @@ app.post("/ss/login",function(req,res){
 });
 
 
-var server=http.createServer(app);
-	server.listen(3000,function(req,res){
-	});
+//var server=http.createServer(app);
+//	server.listen(3000,function(req,res){
+//	});
+app.listen(3000);
 
-var io=socketIO.listen(server);
+var io=socketIO.listen(app);
 io.set("authorization",function(handData,callback){
 	var str=handData.headers.cookie;
 		handData.cookie=paserCookie.pk(str);
